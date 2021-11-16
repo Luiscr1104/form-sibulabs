@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <div>
-      <h1 class="mt-10 mb-10 indigo--text text--lighten-1">Formulario</h1>
+      <h1 class="mt-10 mb-10">Formulario</h1>
       <v-form
         ref="form"
         v-model="valid"
@@ -88,6 +88,7 @@ export default {
     postData(e) {
       this.axios.post("http://localhost:3000/post", this.post).then((result) => {
         console.warn(result);
+        alert('Su Data se guardó en bd.json')
       });
       e.preventDefault();
     },

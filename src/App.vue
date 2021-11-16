@@ -2,8 +2,7 @@
   <v-app>
     <v-app-bar
       app
-      color="#2775ff"
-      dark
+      color="white"
     >
       <div class="d-flex align-center">
         <v-img
@@ -16,18 +15,21 @@
         />
       </div>
     </v-app-bar>
-
     <v-main>
+      
       <router-view/>
+      <FooterComponent />
     </v-main>
+
   </v-app>
 </template>
 
 <script>
+import FooterComponent from './components/FooterComponent';
 export default {
   name: 'App',
   components: {
-    
+    FooterComponent,
   },
   data: () => ({
     //
