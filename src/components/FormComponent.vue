@@ -86,8 +86,10 @@ export default {
   }),
   methods: {
     postData(e) {
-    this.axios.post()
-    e.preventDefault();
+      this.axios.post("http://localhost:3000/post", this.post).then((result) => {
+        console.warn(result);
+      });
+      e.preventDefault();
     },
     validate() {
       this.$refs.form.validate();
